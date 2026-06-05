@@ -19,7 +19,7 @@ jobs:
             echo "The directory structure is as follows:"
             ls -R
             pwd
-            mkdir /target
+            mkdir -p target
       - name: upload artifact
         uses: actions/upload-artifact@v5
         with:
