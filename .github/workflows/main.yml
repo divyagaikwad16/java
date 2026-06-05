@@ -19,8 +19,9 @@ jobs:
             echo "The directory structure is as follows:"
             ls -R
             pwd
+            mkdir /target
       - name: upload artifact
         uses: actions/upload-artifact@v5
         with:
           name: java11-examples
-          path: java11-examples
+          path: target
