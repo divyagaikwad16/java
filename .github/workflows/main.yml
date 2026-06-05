@@ -20,8 +20,10 @@ jobs:
             ls -R
             pwd
             mkdir -p target
+      - name: create an artifact
+        run: mvn install
       - name: upload artifact
         uses: actions/upload-artifact@v5
         with:
-          name: java11-examples
-          path: target
+          name: java11
+          path: target/*.jar
