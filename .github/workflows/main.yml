@@ -13,8 +13,8 @@ jobs:
       - name: check the name
         run: echo "This is the build job"
       - name: checout the code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v5
         with:
           name: java11-examples
