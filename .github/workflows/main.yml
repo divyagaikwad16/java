@@ -27,3 +27,8 @@ jobs:
         with:
           name: java11_1
           path: target/*.jar
+      - name: download artifact
+        uses: actions/download-artifact@v5
+        with:
+          name: java11_1
+          path: target
