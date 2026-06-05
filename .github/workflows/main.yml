@@ -1,1 +1,20 @@
+name: test
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check the name
+        run: echo "This is the build job"
+      - name: checout the code
+        uses: actions/checkout@v2
+      - name: upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: java11-examples
