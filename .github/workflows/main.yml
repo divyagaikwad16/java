@@ -25,5 +25,5 @@ jobs:
       - name: upload artifact
         uses: actions/upload-artifact@v5
         with:
-          name: java11
+          name: java11_1
           path: target/*.jar
