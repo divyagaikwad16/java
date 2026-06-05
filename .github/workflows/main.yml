@@ -14,9 +14,13 @@ jobs:
         run: echo "This is the build job"
       - name: checout the code
         uses: actions/checkout@v3
+      - name: check directory structure
+        run: |
+            echo "The directory structure is as follows:"
+            ls -R
+            pwd
       - name: upload artifact
         uses: actions/upload-artifact@v5
         with:
           name: java11-examples
           path: java11-examples
-          
