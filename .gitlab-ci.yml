@@ -1,0 +1,16 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - 'mvn clean package
+
+deploy1:
+  image: maven:3.6-jdk-11
+  stage: deploy
+  script:
+    - 'mvn deploy -s settings.xml'
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
